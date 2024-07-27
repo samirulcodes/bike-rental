@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Popular Models in Kolkata</title>
+    <link rel="stylesheet" href="findbikes.css">
+</head>
+
+<body>
+    <h1>Popular Models in Kolkata</h1>
+
+    <div class="models">
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="model">
+            <img src="ray_z.jpg" alt="Ray Z">
+            <h2>Ray Z</h2>
+            <p>₹400/day</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: ₹0</p>
+    </div>
+
+    <!-- Book now button -->
+    <div>
+        <button class="book-now">Book Now</button>
+        <p class="booking-status"></p </div>
+
+        <script src="script.js"></script>
+
+        <script>
+            const cartItems = document.getElementById('cart-items');
+            const totalPriceElement = document.getElementById('total-price');
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+            let cart = [];
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modelName = button.parentElement.querySelector('h2').textContent;
+                    const price = parseInt(button.parentElement.querySelector('p').textContent.replace('₹', ''));
+
+                    const item = {
+                        name: modelName,
+                        price: price
+                    };
+
+                    cart.push(item);
+
+                    updateCart();
+                });
+            });
+
+            function updateCart() {
+                cartItems.innerHTML = '';
+                let totalPrice = 0;
+
+                cart.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.name} - ₹${item.price}`;
+                    cartItems.appendChild(li);
+                    totalPrice += item.price;
+                });
+
+                totalPriceElement.textContent = `Total: ₹${totalPrice}`;
+            }
+
+
+            // book now
+            const bookNowButtons = document.querySelectorAll('.book-now');
+
+            bookNowButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const bookingStatus = button.nextElementSibling;
+                    bookingStatus.textContent = 'Successfully booked!';
+                });
+            });
+
+        </script>
+</body>
+
+</html>

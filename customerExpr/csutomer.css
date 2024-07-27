@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.experience {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2em;
+}
+
+.customer {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    width: 300px;
+}
+
+.customer img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.customer p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.customer span {
+    display: block;
+    margin-top: 0.5em;
+    color: #888;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    justify-content: center;
+}

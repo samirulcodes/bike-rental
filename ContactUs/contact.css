@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: #faf5f5;
+  }
+  
+  .contact {
+    text-align: center;
+  }
+  a:link{
+    text-decoration: none;
+  }
+  a{
+    color: #000;
+  }
+  
+  .map {
+    width: 100%;
+    text-align: center;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .dealer-login {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:16px;
+    cursor: pointer; 
+  }

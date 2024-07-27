@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/ContactUs/dealerLogin.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/index.html"><button class="back-home">Back to Home</button></a>
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <button id="registerButton">Register</button>
+        </div>
+    </div>
+
+
+    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+        
+            // Store user data in local storage
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+        
+            alert('Login data stored in local storage.');
+        });
+        
+        document.getElementById('registerButton').addEventListener('click', function() {
+            const username = prompt('Enter a username:');
+            const password = prompt('Enter a password:');
+        
+            if (username && password) {
+                // Store user data in local storage
+                localStorage.setItem('username', username);
+                localStorage.setItem('password', password);
+        
+                alert('User registered successfully.');
+            } else {
+                alert('Please enter valid details.');
+            }
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2 {
+    color: #444;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero-section {
+    /* background: url('/img/ReadMore/discount/bike2.jpeg') no-repeat center center/cover; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: #e64a19;
+}
+
+/* Discount Details Section */
+.discount-details {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.discount-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.discount-details li {
+    background-color: #ffccbc;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Footer
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+} */

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More Page</title>
+    <link rel="stylesheet" href="read.css">
+</head>
+<body>
+    <div class="container">
+        <h1>About us</h1>
+        <p class="content">
+            RenTrip is a leading Motorbike, Car, Bicycle and furniture rental & travel company that offers a diversified and exceptional range of two-wheelers, Cars, Bicycles and Furniture on rent. Travellers with a spirit governed by an intense passion for riding different bikes, Cars, and Bicycles have just landed in the right place. We also offer a range of furniture for rent.
+        </p>
+        <p class="more-content">
+            You can go on a long ride and have an enjoyable trip for consecutive days by renting your favourite vehicles. Our company offers competitive pricing and optimum quality vehicles that provide an exquisite experience. We have a pool of scooters, bikes, motorcycles, cars, and furniture to suit customers' requirements and specifications. Our customer-oriented approach enables us to fulfil your distant dreams and serve beyond your expectations levels. <br><br>
+
+            Dreams need vision more than money. If you own a Splendor and wish to ride a Bullet, a temporary absence or a long-term desire should not hinder you. You can contact RenTrip.  Across the country, RenTrip excels in motorcycle, car & bicycle rental and stands out for its overall services.  A wide array of two-wheelers, cars and bicycles are provided for rent. Various riders with an inherent passion for riding or inspired by roadies find a long-desired getaway here at RenTrip. Personalization and commitment to a high degree make us one of India's topmost rental service providers. We have a large store of exclusive bikes, cars, and bicycles, providing riders with choices and suitability according to budget. Rentals are provided hourly, daily, weekly, and monthly.
+        </p>
+        <button id="read-more-btn">Read More</button>
+    </div>
+    <script src="script.js"></script>
+
+
+    <script>
+        document.getElementById('read-more-btn').addEventListener('click', function() {
+            var moreContent = document.querySelector('.more-content');
+            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                moreContent.style.display = 'block';
+                this.textContent = 'Read Less';
+            } else {
+                moreContent.style.display = 'none';
+                this.textContent = 'Read More';
+            }
+        });
+        
+    </script>
+</body>
+</html>

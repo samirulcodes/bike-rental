@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Blog Posts</title>
+    <link rel="stylesheet" href="/blog page/blog.css">
+</head>
+<body>
+    <div class="blog-container">
+        <h2>Recent Blog Posts</h2>
+        <div class="blog-post">
+            <div class="blog-info">
+                <span>Category</span> Self Drive | 
+                <span>Date</span> 24 Jul, 24 | 
+                <span>By</span> Shriyansh Garg |
+                <span>Share</span> 
+                <a href="#">FB</a> 
+                <a href="#">TW</a> 
+                <a href="#">WA</a>
+            </div>
+            <img src="/img/findbikes/bike10.jpeg" alt="Safer Driving">
+            <h3>Safer Driving This Monsoon With These Driving Techniques</h3>
+            <p>Safer Driving This Monsoon With these Driving Techniques Thinking about travelling in monsoon, a certain amount of issues such as water logging, aqua...</p>
+            <button class="read-more" data-blog="blog1.html">Read More</button>
+        </div>
+        <div class="blog-post">
+            <div class="blog-info">
+                <span>Category</span> Rent Bike | 
+                <span>Date</span> 12 Jul, 24 | 
+                <span>By</span> Samirul Islam |
+                <!-- <span>Share</span> 
+                <a href="#">FB</a> 
+                <a href="#">TW</a> 
+                <a href="#">WA</a> -->
+            </div>
+            <img src="/img/findbikes/bike12.jpeg" alt="Bike Riding">
+            <h3>Comprehensive Bike Riding Guide For New Learners</h3>
+            <p>Thinking about travelling in monsoon, a certain amount of issues such as water logging, aquaplaning etc. Could render you into dire situations. As a traveller its always important to be wary of such situations and preplan. To help our subscribers and readers we would try to enlist a few driving techniques and checks and balances following which you can easily drive around in monsoon without any issues or problems.</p>
+            <button class="read-more" data-blog="blog2.html">Read More</button>
+        </div>
+        <button class="see-all-posts">See All Posts</button>
+    </div>
+
+    <!-- <script src="scripts.js"></script> -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const readMoreButtons = document.querySelectorAll('.read-more');
+        
+            readMoreButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const blogPage = event.target.getAttribute('data-blog');
+                    window.location.href = blogPage;
+                });
+            });
+        });
+        
+    </script>
+</body>
+</html>

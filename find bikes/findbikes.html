@@ -1,169 +1,180 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Popular Models in Kolkata</title>
-    <link rel="stylesheet" href="findbikes.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental</title>
+    <link rel="stylesheet" href="/find bikes/findbikes.css">
 </head>
-
 <body>
-    <h1>Popular Models in Kolkata</h1>
-
-    <div class="models">
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
+    <div class="container">
+        <h1>Bike Rental</h1>
+        <h2>Different Types of Bike & Scooty Available Here</h2>
+        <div id="bikes">
+            <div class="bike">
+                <img src="/img/findbikes/bike1.jpeg" alt="Bike 1">
+                <h2>Bike 1</h2>
+                <p>$100</p>
+                <button onclick="addToCart('Bike 1', 100)">Add to Cart</button>
+            </div>
+            <div class="bike">
+                <img src="/img/findbikes/bike2.jpeg" alt="Bike 2">
+                <h2>Bike 2</h2>
+                <p>$120</p>
+                <button onclick="addToCart('Bike 2', 120)">Add to Cart</button>
+            </div>
+            <div class="bike">
+                <img src="/img/findbikes/bike3.jpeg" alt="Bike 3">
+                <h2>Bike 3</h2>
+                <p>$150</p>
+                <button onclick="addToCart('Bike 3', 150)">Add to Cart</button>
+            </div>
+            <div class="bike">
+                <img src="/img/findbikes/bike4.jpeg" alt="Bike 4">
+                <h2>Bike 4</h2>
+                <p>$130</p>
+                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
+            </div>
+            <div class="bike">
+                <img src="/img/findbikes/bike10.jpeg" alt="Bike 4">
+                <h2>Bike 4</h2>
+                <p>$130</p>
+                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
+            </div>
+            <div class="bike">
+                <img src="/img/findbikes/bike6.jpeg" alt="Bike 4">
+                <h2>Bike 4</h2>
+                <p>$130</p>
+                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
+            </div>
+            <div class="bike">
+                <img src="/img/findbikes/bike7.jpeg" alt="Bike 4">
+                <h2>Bike 4</h2>
+                <p>$130</p>
+                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
+            </div>
+            <div class="bike">
+                <img src="/img/findbikes/bike8.jpeg" alt="Bike 4">
+                <h2>Bike 4</h2>
+                <p>$130</p>
+                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
+            </div>
+            <div class="bike">
+                <img src="/img/findbikes/bike9.jpeg" alt="Bike 4">
+                <h2>Bike 4</h2>
+                <p>$130</p>
+                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
+            </div>
+            <div class="bike">
+                <img src="/img/findbikes/bike23.jpeg" alt="Bike 4">
+                <h2>Bike 4</h2>
+                <p>$130</p>
+                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
+            </div>
         </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
+        <div id="cart">
+            <h2>Cart</h2>
+            <p id="cart-status">No bike selected</p>
+            <p>Total Price: $<span id="total-price">0</span></p>
+            <button id="book-now-btn" onclick="bookNow()">Book Now</button>
         </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
+        <div id="payment-options" class="hidden">
+            <h2>Payment Options</h2>
+            <p>Choose Payment Method:</p>
+            <label><input type="radio" name="payment" value="UPI" onclick="showUPIOptions()"> UPI</label>
+            <div id="upi-options" class="hidden">
+                <label><input type="radio" name="upi" value="PhonePe"> PhonePe</label>
+                <label><input type="radio" name="upi" value="Paytm"> Paytm</label>
+            </div>
+            <label><input type="radio" name="payment" value="COD"> Cash on Delivery</label>
+            <button onclick="showDeliveryForm()">Next</button>
         </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
+        <div id="delivery-form" class="hidden">
+            <h2>Delivery Address</h2>
+            <form id="delivery-address-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+                <label for="pincode">Pincode:</label>
+                <input type="text" id="pincode" name="pincode" required><br>
+                <button type="button" onclick="confirmBooking()">Confirm Booking</button>
+            </form>
         </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-        <div class="model">
-            <img src="ray_z.jpg" alt="Ray Z">
-            <h2>Ray Z</h2>
-            <p>₹400/day</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
+        <div id="success-message" class="hidden">Booked Successfully!</div>
     </div>
+    <script src="scripts.js"></script>
 
-    <div class="cart">
-        <h2>Cart</h2>
-        <ul id="cart-items"></ul>
-        <p id="total-price">Total: ₹0</p>
-    </div>
+    <script>
+        let cart = [];
+let totalPrice = 0;
 
-    <!-- Book now button -->
-    <div>
-        <button class="book-now">Book Now</button>
-        <p class="booking-status"></p </div>
+function addToCart(name, price) {
+    cart.push({ name, price });
+    totalPrice += price;
+    updateCart();
+}
 
-        <script src="script.js"></script>
+function updateCart() {
+    const cartStatus = document.getElementById('cart-status');
+    const totalPriceElem = document.getElementById('total-price');
 
-        <script>
-            const cartItems = document.getElementById('cart-items');
-            const totalPriceElement = document.getElementById('total-price');
-            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    if (cart.length === 0) {
+        cartStatus.textContent = 'No bike selected';
+    } else {
+        cartStatus.textContent = cart.map(item => item.name).join(', ');
+    }
 
-            let cart = [];
+    totalPriceElem.textContent = totalPrice;
+}
 
-            addToCartButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const modelName = button.parentElement.querySelector('h2').textContent;
-                    const price = parseInt(button.parentElement.querySelector('p').textContent.replace('₹', ''));
+function bookNow() {
+    if (cart.length === 0) {
+        alert('No bike selected');
+        return;
+    }
 
-                    const item = {
-                        name: modelName,
-                        price: price
-                    };
+    document.getElementById('payment-options').classList.remove('hidden');
+}
 
-                    cart.push(item);
+function showUPIOptions() {
+    document.getElementById('upi-options').classList.remove('hidden');
+}
 
-                    updateCart();
-                });
-            });
+function showDeliveryForm() {
+    const paymentMethod = document.querySelector('input[name="payment"]:checked');
 
-            function updateCart() {
-                cartItems.innerHTML = '';
-                let totalPrice = 0;
+    if (!paymentMethod) {
+        alert('Please select a payment method');
+        return;
+    }
 
-                cart.forEach(item => {
-                    const li = document.createElement('li');
-                    li.textContent = `${item.name} - ₹${item.price}`;
-                    cartItems.appendChild(li);
-                    totalPrice += item.price;
-                });
+    document.getElementById('payment-options').classList.add('hidden');
+    document.getElementById('delivery-form').classList.remove('hidden');
+}
 
-                totalPriceElement.textContent = `Total: ₹${totalPrice}`;
-            }
+function confirmBooking() {
+    const address = document.getElementById('address').value;
+    const phone = document.getElementById('phone').value;
+    const pincode = document.getElementById('pincode').value;
 
+    if (!address || !phone || !pincode) {
+        alert('Please fill out all fields');
+        return;
+    }
 
-            // book now
-            const bookNowButtons = document.querySelectorAll('.book-now');
+    document.getElementById('success-message').classList.remove('hidden');
+    setTimeout(() => {
+        document.getElementById('success-message').classList.add('hidden');
+        document.getElementById('delivery-form').classList.add('hidden');
+        cart = [];
+        totalPrice = 0;
+        updateCart();
+    }, 5000);
+}
 
-            bookNowButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const bookingStatus = button.nextElementSibling;
-                    bookingStatus.textContent = 'Successfully booked!';
-                });
-            });
-
-        </script>
+    </script>
 </body>
-
 </html>

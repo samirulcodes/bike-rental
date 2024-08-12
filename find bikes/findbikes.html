@@ -1,180 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bike Rental</title>
     <link rel="stylesheet" href="/find bikes/findbikes.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Bike Rental</h1>
-        <h2>Different Types of Bike & Scooty Available Here</h2>
-        <div id="bikes">
-            <div class="bike">
-                <img src="/img/findbikes/bike1.jpeg" alt="Bike 1">
-                <h2>Bike 1</h2>
-                <p>$100</p>
-                <button onclick="addToCart('Bike 1', 100)">Add to Cart</button>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="container1">
+            <div class="logo">
+                <img src="/img/logo.png" alt="Logo">
             </div>
-            <div class="bike">
-                <img src="/img/findbikes/bike2.jpeg" alt="Bike 2">
-                <h2>Bike 2</h2>
-                <p>$120</p>
-                <button onclick="addToCart('Bike 2', 120)">Add to Cart</button>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="/Home/home.html">Home</a></li>
+                    <li><a href="/About/about.html">About</a></li>
+                    <li><a href="/Contact/contact.html">Contact</a></li>
+                    <li><a href="/Review/review.html">Review</a></li>
+                    <li><a href="/index.html">Recipes</a></li>
+                    <li><a href="/login/login.html">Login/Register</a></li>
+                </ul>
             </div>
-            <div class="bike">
-                <img src="/img/findbikes/bike3.jpeg" alt="Bike 3">
-                <h2>Bike 3</h2>
-                <p>$150</p>
-                <button onclick="addToCart('Bike 3', 150)">Add to Cart</button>
-            </div>
-            <div class="bike">
-                <img src="/img/findbikes/bike4.jpeg" alt="Bike 4">
-                <h2>Bike 4</h2>
-                <p>$130</p>
-                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
-            </div>
-            <div class="bike">
-                <img src="/img/findbikes/bike10.jpeg" alt="Bike 4">
-                <h2>Bike 4</h2>
-                <p>$130</p>
-                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
-            </div>
-            <div class="bike">
-                <img src="/img/findbikes/bike6.jpeg" alt="Bike 4">
-                <h2>Bike 4</h2>
-                <p>$130</p>
-                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
-            </div>
-            <div class="bike">
-                <img src="/img/findbikes/bike7.jpeg" alt="Bike 4">
-                <h2>Bike 4</h2>
-                <p>$130</p>
-                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
-            </div>
-            <div class="bike">
-                <img src="/img/findbikes/bike8.jpeg" alt="Bike 4">
-                <h2>Bike 4</h2>
-                <p>$130</p>
-                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
-            </div>
-            <div class="bike">
-                <img src="/img/findbikes/bike9.jpeg" alt="Bike 4">
-                <h2>Bike 4</h2>
-                <p>$130</p>
-                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
-            </div>
-            <div class="bike">
-                <img src="/img/findbikes/bike23.jpeg" alt="Bike 4">
-                <h2>Bike 4</h2>
-                <p>$130</p>
-                <button onclick="addToCart('Bike 4', 130)">Add to Cart</button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-        <div id="cart">
-            <h2>Cart</h2>
-            <p id="cart-status">No bike selected</p>
-            <p>Total Price: $<span id="total-price">0</span></p>
-            <button id="book-now-btn" onclick="bookNow()">Book Now</button>
-        </div>
-        <div id="payment-options" class="hidden">
-            <h2>Payment Options</h2>
-            <p>Choose Payment Method:</p>
-            <label><input type="radio" name="payment" value="UPI" onclick="showUPIOptions()"> UPI</label>
-            <div id="upi-options" class="hidden">
-                <label><input type="radio" name="upi" value="PhonePe"> PhonePe</label>
-                <label><input type="radio" name="upi" value="Paytm"> Paytm</label>
+    </nav>
+
+
+    <section class="bike-display">
+        <h1>Our Bike Collection</h1>
+        <div class="bike-container">
+            <!-- Bike Card Template -->
+            <!-- Repeat this block for each bike -->
+            <div class="bike-card">
+                <img src="/findbikes/bike5.jpeg" alt="Bike 1">
+                <div class="bike-info">
+                    <h2>Bike Model 1</h2>
+                    <p>Short description of Bike Model 1.</p>
+                    <button class="add-to-cart" onclick="addToCart('Bike Model 1', 100)">Add to Cart</button>
+                </div>
             </div>
-            <label><input type="radio" name="payment" value="COD"> Cash on Delivery</label>
-            <button onclick="showDeliveryForm()">Next</button>
+            <div class="bike-card">
+                <img src="/findbikes/bike5.jpeg" alt="Bike 1">
+                <div class="bike-info">
+                    <h2>Bike Model 1</h2>
+                    <p>Short description of Bike Model 1.</p>
+                    <button class="add-to-cart" onclick="addToCart('Bike Model 1', 100)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bike-card">
+                <img src="/findbikes/bike5.jpeg" alt="Bike 1">
+                <div class="bike-info">
+                    <h2>Bike Model 1</h2>
+                    <p>Short description of Bike Model 1.</p>
+                    <button class="add-to-cart" onclick="addToCart('Bike Model 1', 100)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bike-card">
+                <img src="/findbikes/bike5.jpeg" alt="Bike 1">
+                <div class="bike-info">
+                    <h2>Bike Model 1</h2>
+                    <p>Short description of Bike Model 1.</p>
+                    <button class="add-to-cart" onclick="addToCart('Bike Model 1', 100)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bike-card">
+                <img src="/findbikes/bike5.jpeg" alt="Bike 1">
+                <div class="bike-info">
+                    <h2>Bike Model 1</h2>
+                    <p>Short description of Bike Model 1.</p>
+                    <button class="add-to-cart" onclick="addToCart('Bike Model 1', 100)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bike-card">
+                <img src="/findbikes/bike5.jpeg" alt="Bike 1">
+                <div class="bike-info">
+                    <h2>Bike Model 1</h2>
+                    <p>Short description of Bike Model 1.</p>
+                    <button class="add-to-cart" onclick="addToCart('Bike Model 1', 100)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bike-card">
+                <img src="/findbikes/bike5.jpeg" alt="Bike 1">
+                <div class="bike-info">
+                    <h2>Bike Model 1</h2>
+                    <p>Short description of Bike Model 1.</p>
+                    <button class="add-to-cart" onclick="addToCart('Bike Model 1', 100)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bike-card">
+                <img src="/findbikes/bike5.jpeg" alt="Bike 1">
+                <div class="bike-info">
+                    <h2>Bike Model 1</h2>
+                    <p>Short description of Bike Model 1.</p>
+                    <button class="add-to-cart" onclick="addToCart('Bike Model 1', 100)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bike-card">
+                <img src="/findbikes/bike5.jpeg" alt="Bike 1">
+                <div class="bike-info">
+                    <h2>Bike Model 1</h2>
+                    <p>Short description of Bike Model 1.</p>
+                    <button class="add-to-cart" onclick="addToCart('Bike Model 1', 100)">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Repeat above block for bikes 2 to 10 -->
         </div>
-        <div id="delivery-form" class="hidden">
-            <h2>Delivery Address</h2>
-            <form id="delivery-address-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
+    </section>
+
+    <section class="cart" id="cartSection">
+        <h2>Cart</h2>
+        <div id="cartItems"></div>
+        <div id="cartTotal">
+            <p>Total Amount: $<span id="totalAmount">0</span></p>
+            <p id="discountMessage"></p>
+            <button class="book-now" id="bookNowButton" onclick="proceedToCheckout()" disabled>Book Now</button>
+        </div>
+    </section>
+
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Enter Your Details</h2>
+            <form id="checkoutForm">
                 <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required><br>
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required><br>
-                <label for="pincode">Pincode:</label>
-                <input type="text" id="pincode" name="pincode" required><br>
-                <button type="button" onclick="confirmBooking()">Confirm Booking</button>
+                <input type="text" id="address" name="address" required>
+                <label for="contact">Phone Number or Email:</label>
+                <input type="text" id="contact" name="contact" required>
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment" required>
+                    <option value="upi">UPI</option>
+                    <option value="phonepe">PhonePe</option>
+                    <option value="paytm">Paytm</option>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+                <button type="submit">Complete Booking</button>
             </form>
         </div>
-        <div id="success-message" class="hidden">Booked Successfully!</div>
     </div>
-    <script src="scripts.js"></script>
+
+
+
+      <!-- script for navbar hamburger menu -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile');
+            });
+        });
+
+    </script>
 
     <script>
         let cart = [];
-let totalPrice = 0;
+        let totalAmount = 0;
 
-function addToCart(name, price) {
-    cart.push({ name, price });
-    totalPrice += price;
-    updateCart();
-}
+        function addToCart(bikeName, price) {
+            cart.push({ name: bikeName, price: price });
+            updateCart();
+        }
 
-function updateCart() {
-    const cartStatus = document.getElementById('cart-status');
-    const totalPriceElem = document.getElementById('total-price');
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const totalAmountElem = document.getElementById('totalAmount');
+            const discountMessageElem = document.getElementById('discountMessage');
+            const bookNowButton = document.getElementById('bookNowButton');
 
-    if (cart.length === 0) {
-        cartStatus.textContent = 'No bike selected';
-    } else {
-        cartStatus.textContent = cart.map(item => item.name).join(', ');
-    }
+            cartItems.innerHTML = '';
+            totalAmount = 0;
 
-    totalPriceElem.textContent = totalPrice;
-}
+            cart.forEach(item => {
+                totalAmount += item.price;
+                cartItems.innerHTML += `<p>${item.name} - $${item.price}</p>`;
+            });
 
-function bookNow() {
-    if (cart.length === 0) {
-        alert('No bike selected');
-        return;
-    }
+            let discount = 0;
+            if (localStorage.getItem('firstTime') !== 'false') {
+                discount = totalAmount * 0.4;
+                totalAmount -= discount;
+                localStorage.setItem('firstTime', 'false');
+            }
 
-    document.getElementById('payment-options').classList.remove('hidden');
-}
+            totalAmountElem.textContent = totalAmount.toFixed(2);
+            discountMessageElem.textContent = discount ? `Discount Applied: $${discount.toFixed(2)}` : '';
+            bookNowButton.disabled = cart.length === 0;
+        }
 
-function showUPIOptions() {
-    document.getElementById('upi-options').classList.remove('hidden');
-}
+        function proceedToCheckout() {
+            if (cart.length === 0) return;
+            document.getElementById('checkoutModal').style.display = 'block';
+        }
 
-function showDeliveryForm() {
-    const paymentMethod = document.querySelector('input[name="payment"]:checked');
+        function closeModal() {
+            document.getElementById('checkoutModal').style.display = 'none';
+        }
 
-    if (!paymentMethod) {
-        alert('Please select a payment method');
-        return;
-    }
+        document.getElementById('checkoutForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const address = document.getElementById('address').value;
+            const contact = document.getElementById('contact').value;
+            const paymentMethod = document.getElementById('payment').value;
 
-    document.getElementById('payment-options').classList.add('hidden');
-    document.getElementById('delivery-form').classList.remove('hidden');
-}
+            localStorage.setItem('order', JSON.stringify({
+                address: address,
+                contact: contact,
+                paymentMethod: paymentMethod,
+                cart: cart,
+                totalAmount: totalAmount
+            }));
 
-function confirmBooking() {
-    const address = document.getElementById('address').value;
-    const phone = document.getElementById('phone').value;
-    const pincode = document.getElementById('pincode').value;
+            alert('Booking Successful!');
+            setTimeout(() => {
+                window.location.href = 'home.html';
+            }, 5000);
+        });
 
-    if (!address || !phone || !pincode) {
-        alert('Please fill out all fields');
-        return;
-    }
-
-    document.getElementById('success-message').classList.remove('hidden');
-    setTimeout(() => {
-        document.getElementById('success-message').classList.add('hidden');
-        document.getElementById('delivery-form').classList.add('hidden');
-        cart = [];
-        totalPrice = 0;
-        updateCart();
-    }, 5000);
-}
+        function toggleMenu() {
+            document.querySelector('.navbar').classList.toggle('active');
+        }
 
     </script>
+
 </body>
+
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental Offers</title>
+    <link rel="stylesheet" href="/Offers Page/offer.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/img/logo.png" alt="Bike Rental Logo">
+        </div>
+        <div class="nav-links" id="navLinks">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Bikes</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <img src="menu.png" class="menu-icon" onclick="toggleMenu()">
+    </nav>
+
+    <section class="offers">
+        <h1>Exclusive Bike Rental Offers</h1>
+        <div class="offer-card">
+            <h2>50% Off on First Ride</h2>
+            <p>Enjoy a massive 50% discount on your first bike ride with us. Use code FIRST50 at checkout!</p>
+            <button class="book-now">Book Now</button>
+        </div>
+        <div class="offer-card">
+            <h2>Rent 1 Get 1 Free</h2>
+            <p>Rent any bike for a day and get the second day free! Use code BOGO at checkout.</p>
+            <button class="book-now">Book Now</button>
+        </div>
+        <div class="offer-card">
+            <h2>20% Cashback</h2>
+            <p>Get 20% cashback on all rentals above $50. Use code CASHBACK20 at checkout!</p>
+            <button class="book-now">Book Now</button>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+        
+    </script>
+</body>
+</html>

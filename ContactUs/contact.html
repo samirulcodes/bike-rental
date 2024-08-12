@@ -1,34 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Rentrip</title>
-  <link rel="stylesheet" href="contact.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/ContactUs/contact.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 <body>
-  <header>
-    <div class="contact">
-      <i class="fa fa-map-marker"></i>
-      <p>Arya Samaj Oravan rehod <br> Ganjepur, Jaunpur Raebareli <br> India, UP, 229301</p>
+   <!-- navbar -->
+   <nav class="navbar">
+    <div class="Container">
+        <div class="Logo">
+            <img src="/img/logo.png" alt="Logo">
+        </div>
+        <div class="nav-links" id="navLinks">
+            <ul>
+                <li><a href="/Home/home.html">Home</a></li>
+                <li><a href="/About/about.html">About</a></li>
+                <li><a href="/Contact/contact.html">Contact</a></li>
+                <li><a href="/Review/review.html">Review</a></li>
+                <li><a href="/index.html">Recipes</a></li>
+                <li><a href="/ContactUs/dealersLogIn.html">Login/Register</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
-    <div class="contact">
-      <i class="fa fa-envelope"></i>
-      <a href=""><p>Sales Team <br> Support Team</p></a>
-    </div>
-    <div class="contact">
-      <i class="fa fa-phone"></i>
-      <p>+91-000077908 <br> Calling Hours <br> 05:30 pm to 06:30 pm</p>
-    </div>
-  </header>
+</nav>
 
-  <div class="map">
-    <!-- <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d49705016.35352097!2d67.9601062683737!3d21.449807468285332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1722012691301!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+<!-- contact form -->
+    <div class="contact-container">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
 
-  <footer>
-    <p>Grow your business with Rentrip.</p>
-   <a href="/ContactUs/dealersLogIn.html"><button class="dealer-login">Dealer Login</button></a>
+        <div class="map">
+            <h2>Our Location</h2>
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509256!2d144.95373531584484!3d-37.81627944202115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577afac48b16f!2sVictoria%20State%20Library%20Australia!5e0!3m2!1sen!2sus!4v1618965848247!5m2!1sen!2sus"   width="100%"    height="300"   style="border:0;"  allowfullscreen=""  loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+          <div class="footer-links">
+              <div class="column">
+                  <a href="#">About Rentrip</a>
+                  <a href="#">Why Rentrip?</a>
+                  <a href="#">How Rentrip Works</a>
+                  <a href="#">Payment and Security</a>
+                  <a href="#">Terms and Conditions</a>
+                  <a href="#">Privacy Policy</a>
+              </div>
+              <div class="column">
+                  <a href="#">Partner with Us</a>
+                  <a href="#">Terms of Use</a>
+                  <a href="#">Safety</a>
+                  <a href="#">Discount Coupons</a>
+                  <a href="#">Support</a>
+                  <a href="#">Contact Us</a>
+              </div>
+              <div class="column">
+                  <p>Mail</p>
+                  <a href="mailto:email@example.com">Email Us</a>
+                  <p>Call us</p>
+                  <a href="tel:+918800779391">+91 88007 79391</a>
+              </div>
+              <div class="column">
+                  <p>Download the Rentrip App</p>
+                  <a href="#"><img src="/img/android.jpg" alt="Google Play"></a>
+                  <a href="#"><img src="/img/ios.jpg" alt="App Store"></a>
+              </div>
+          </div>
+          <div class="social-media">
+              <a href=""> <i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/aman.js.07?igsh=ZTE2czh4emxxMHMz"><i class="fab fa-instagram"></i></a>
+              <a href="#"> <i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/samirul-islam-8692862a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/samirulcodes"><i class="fa-solid fa-code-branch"></i></a>
+
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>Copyrights © 2024 Freedom Cycles Pvt Ltd</p>
+        
+      </div>
   </footer>
+
+  <!-- script for navbar hamburger menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile');
+        });
+    });
+
+</script>
 </body>
 </html>

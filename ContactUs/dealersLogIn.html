@@ -1,61 +1,99 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login and Register</title>
     <link rel="stylesheet" href="/ContactUs/dealerLogin.css">
 </head>
 <body>
     <div class="container">
-        <a href="/index.html"><button class="back-home">Back to Home</button></a>
-        <div class="login-box">
+        <div id="login-form" class="form-container">
             <h2>Login</h2>
-            <form id="loginForm">
-                <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" required>
-                </div>
-                <button type="submit">Login</button>
+            <form>
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+                <button type="button" id="login-show-password">Show Password</button>
+                <button type="button" onclick="login()">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showRegisterForm()">Register here</a></p>
             </form>
-            <button id="registerButton">Register</button>
+        </div>
+        <div id="register-form" class="form-container">
+            <h2>Register</h2>
+            <form>
+                <label for="register-username">Username:</label>
+                <input type="text" id="register-username" required>
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" required>
+                <button type="button" id="register-show-password">Show Password</button>
+                <button type="button" onclick="register()">Register</button>
+                <p>Already have an account? <a href="#" onclick="showLoginForm()">Login here</a></p>
+            </form>
         </div>
     </div>
-
-
     
+    
+
+
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-        
-            // Store user data in local storage
-            localStorage.setItem('username', username);
-            localStorage.setItem('password', password);
-        
-            alert('Login data stored in local storage.');
+        document.addEventListener('DOMContentLoaded', () => {
+            showLoginForm();
+            document.getElementById('login-show-password').addEventListener('click', () => togglePassword('login-password'));
+            document.getElementById('register-show-password').addEventListener('click', () => togglePassword('register-password'));
         });
         
-        document.getElementById('registerButton').addEventListener('click', function() {
-            const username = prompt('Enter a username:');
-            const password = prompt('Enter a password:');
+        function showLoginForm() {
+            document.getElementById('login-form').style.display = 'block';
+            document.getElementById('register-form').style.display = 'none';
+        }
         
-            if (username && password) {
-                // Store user data in local storage
-                localStorage.setItem('username', username);
-                localStorage.setItem('password', password);
+        function showRegisterForm() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        }
         
-                alert('User registered successfully.');
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
             } else {
-                alert('Please enter valid details.');
+                input.type = 'password';
             }
-        });
+        }
+        
+        function login() {
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+        
+            const storedUser = JSON.parse(localStorage.getItem(username));
+            
+            if (storedUser && storedUser.password === password) {
+                alert('Login successful!');
+                // Redirect to the home page
+                window.location.href = '../index.html';
+            } else {
+                alert('Invalid username or password.');
+            }
+        }
+        
+        function register() {
+            const username = document.getElementById('register-username').value;
+            const password = document.getElementById('register-password').value;
+        
+            if (localStorage.getItem(username)) {
+                alert('Username already exists.');
+            } else {
+                const user = { username, password };
+                localStorage.setItem(username, JSON.stringify(user));
+                alert('Registration successful!');
+                showLoginForm();
+            }
+        }
         
     </script>
+
 </body>
 </html>

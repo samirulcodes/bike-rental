@@ -1,9 +1,8 @@
-
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
 /* navbar */
@@ -43,6 +42,7 @@ body {
     font-weight: bold;
   }
   
+
   .hamburger {
     display: none;
     flex-direction: column;
@@ -86,66 +86,105 @@ body {
     }
   }
 
-/* how work */
-.how-container {
-    max-width: 900px;
-    width: 90%;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
-.how-container h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333;
+.hero {
+    background: url('/img/partner-with-us.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 20px;
     text-align: center;
 }
 
-.step {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-.step-image {
-    width: 200px;
-    height: auto;
-    margin-right: 20px;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
-.step-text {
-    flex: 1;
+.cta-button {
+    background: #ff6200;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.step-text h2 {
-    font-size: 24px;
-    color: #007bff;
+.cta-button:hover {
+    background: #e55a00;
+}
+
+.benefits {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.benefits h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.benefit {
+    margin-bottom: 20px;
+}
+
+.benefit h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.step-text p {
-    font-size: 18px;
+.benefit p {
+    font-size: 1rem;
     color: #555;
-    line-height: 1.6;
 }
 
-.step-button {
-    padding: 10px 20px;
-    font-size: 16px;
+.contact {
+    background: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background: #ff6200;
     color: #fff;
-    background-color: #007bff;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
-.step-button:hover {
-    background-color: #0056b3;
+.submit-button:hover {
+    background: #e55a00;
 }
+
 
 /* Footer Section */
 

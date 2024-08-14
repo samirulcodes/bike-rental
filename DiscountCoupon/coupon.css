@@ -1,9 +1,10 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 /* navbar */
@@ -43,6 +44,7 @@ body {
     font-weight: bold;
   }
   
+
   .hamburger {
     display: none;
     flex-direction: column;
@@ -86,74 +88,121 @@ body {
     }
   }
 
-.menu-icon {
-    display: none;
-    width: 30px;
+/* Coupons Section Styles */
+.coupons-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
 }
 
-.offers {
+.coupons-section h1 {
     text-align: center;
-    padding: 50px 20px;
+    margin-bottom: 2rem;
 }
 
-.offers h1 {
-    margin-bottom: 40px;
-    font-size: 36px;
-    color: #333;
+.coupon-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.offer-card {
-    background-color: white;
-    border-radius: 10px;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.coupon-card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
-.offer-card h2 {
-    color: #e67e22;
-    margin-bottom: 10px;
+.coupon-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.offer-card p {
-    color: #555;
-    margin-bottom: 20px;
+.coupon-card .expire-date {
+    color: red;
 }
 
-.book-now {
-    background-color: #e67e22;
+.coupon-card .coupon-code {
+    background-color: #007BFF;
     color: white;
+    padding: 0.5rem 1rem;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.coupon-card .coupon-code:hover {
+    background-color: #0056b3;
+}
+
+.coupon-card .terms-link {
+    color: green;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.coupon-card .share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.coupon-card .share p {
+    margin: 0;
+}
+
+.coupon-card .share a {
+    color: #333;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.coupon-card .share a:hover {
+    color: #007BFF;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.book-now:hover {
-    background-color: #d35400;
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
 }
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .nav-links ul {
-        flex-direction: column;
-        display: none;
-    }
-
-    .nav-links ul.show {
-        display: flex;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .offer-card {
-        margin: 10px;
-    }
-}
-
 
 /* Footer Section */
 

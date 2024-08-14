@@ -50,7 +50,11 @@ body {
     font-weight: bold;
   }
   
-
+  .nav-links ul li:hover{
+    background-color: #ff004f;
+   transition: 0.5s;
+   transform: translateY(-2px);
+  }
   .hamburger {
     display: none;
     flex-direction: column;

@@ -1,86 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partner with Us - Bike Rental</title>
-    <link rel="stylesheet" href="/PartnetWithUs/partner.css">
+    <title>Support Page</title>
+    <link rel="stylesheet" href="/support/support.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
-
 <body>
-    <!-- navbar -->
-    <nav class="navbar">
-        <div class="Container">
-            <div class="Logo">
-                <img src="/img/logo.png" alt="Logo">
-            </div>
-            <div class="nav-links" id="navLinks">
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/About us/about.html">About</a></li>
-                    <li><a href="/ContactUs/contact.html">Contact</a></li>
-                    <li><a href="/Review/review.html">Review</a></li>
-                    <li><a href="/blog page/blog.html">Blog</a></li>
-                    <li><a href="/DiscountCoupon/coupon.html">Offers</a></li>
-                    <li><a href="/ContactUs/dealersLogIn.html">Login/Register</a></li>
-                </ul>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+   <!-- navbar -->
+   <nav class="navbar">
+    <div class="Container">
+        <div class="Logo">
+            <img src="/img/logo.png" alt="Logo">
         </div>
-    </nav>
-
-    <section class="hero">
-        <h1>Partner with Us</h1>
-        <p>Join us in revolutionizing urban mobility. Become a partner and expand your business with our bike rental
-            platform.</p>
-        <a href="#contact-form" class="cta-button">Get in Touch</a>
-    </section>
-
-    <section class="benefits">
-        <h2>Why Partner with Us?</h2>
-        <div class="benefit">
-            <h3>Increased Visibility</h3>
-            <p>Reach a wider audience by featuring your bikes on our platform.</p>
+        <div class="nav-links" id="navLinks">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/About us/about.html">About</a></li>
+                <li><a href="/ContactUs/contact.html">Contact</a></li>
+                <li><a href="/Review/review.html">Review</a></li>
+                <li><a href="/blog page/blog.html">Blog</a></li>
+                <li><a href="/DiscountCoupon/coupon.html">Offers</a></li>
+                <li><a href="/ContactUs/dealersLogIn.html">Login/Register</a></li>
+            </ul>
         </div>
-        <div class="benefit">
-            <h3>Reliable Platform</h3>
-            <p>Our technology ensures a seamless experience for both you and the customers.</p>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="benefit">
-            <h3>Flexible Partnership</h3>
-            <p>We offer various partnership models to suit your business needs.</p>
+    </div>
+</nav>
+
+    <!-- Support Section -->
+    <div class="support-section">
+        <div class="support-card">
+            <i class="icon">&#8595;</i>
+            <h3>Get Started</h3>
+            <p>We have got everything for you. Find your best bike today.</p>
         </div>
-    </section>
+        <div class="support-card">
+            <i class="icon">&#128197;</i>
+            <h3>Schedule a Call</h3>
+            <p>Drop us your contact details and we shall call you shortly.</p>
+        </div>
+        <div class="support-card">
+            <i class="icon">&#128222;</i>
+            <h3>Talk to Us</h3>
+            <p>Want to get in touch immediately? Call us now.</p>
+        </div>
+        <div class="support-card">
+            <i class="icon">&#10067;</i>
+            <h3>Ask A Question</h3>
+            <p>Have a question in mind? Ask us right away and we will answer it soon.</p>
+        </div>
+        <div class="support-card">
+            <i class="icon">&#128101;</i>
+            <h3>Escalation</h3>
+            <p>Not satisfied with resolution. Raise your concern directly with the CEO.</p>
+        </div>
+        <div class="support-card">
+            <i class="icon">&#128386;</i>
+            <h3>Find Answers</h3>
+            <p>Get the answers to the most common questions before you raise a concern.</p>
+        </div>
+        <div class="create-ticket">
+            <h3>Submit a Ticket</h3>
+            <p>Submit a ticket and our helpdesk Support team will assist you shortly.</p>
+            <button onclick="redirectToLogin()">CREATE TICKET</button>
+        </div>
+    </div>
 
-    <section class="contact" id="contact-form">
-        <h2>Let's Work Together</h2>
-        <form action="https://api.web3forms.com/submit" method="post">
-            <input type="hidden" name="access_key" value="e05f0856-1dd4-40ee-9e29-020b03fadce8"> <!-- Aceess Key -->
-
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit" class="submit-button">Submit</button>
-        </form>
-    </section>
-
-       <!-- Footer Section -->
-       <footer>
+      <!-- Footer Section -->
+      <footer>
         <div class="footer-content">
             <div class="footer-links">
                 <div class="column">
@@ -129,8 +122,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-
 
     <!-- script for navbar hamburger menu -->
     <script>
@@ -143,6 +134,13 @@
             });
         });
     </script>
-</body>
 
+    <!-- redirect to login page -->
+    <script>
+        function redirectToLogin() {
+            window.location.href = '/ContactUs/dealersLogIn.html'; 
+        }
+        
+    </script>
+</body>
 </html>

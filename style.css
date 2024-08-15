@@ -135,6 +135,7 @@ body {
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .hero .options button {

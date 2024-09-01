@@ -37,34 +37,81 @@
         </div>
     </nav>
 
-
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-
-            <h1>RENT BIKE IN KOLKATA</h1>
-            <p>Rent from India's Largest Fleet of Motorcycles, Trusted by Thousand</p>
-            <div class="options">
-                <button>Rent Bikes</button>
-                <button>Guided Tours</button>
-            </div>
-            <div class="search-form">
-                <label for="city">City</label>
-                <select id="city">
-                    <option value="kolkata">Kolkata</option>
-                </select>
-                <label for="book-at">Book at</label>
-                <select id="book-at">
-                    <option value="daily">Daily</option>
-                </select>
-                <label for="pickup-date">Picking Up Date</label>
-                <input type="date" id="pickup-date">
-                <label for="dropoff-date">Dropping Off Date</label>
-                <input type="date" id="dropoff-date">
-                <a href="find bikes/findbikes.html"><button>Find Bike</button></a>
-            </div>
+    <!-- Booking page --> 
+     <section id="CONT">
+    <div class="container3">
+        <h1>Bike Rental Service</h1>
+        <div class="form-group">
+            <label for="city">City</label>
+            <select id="city">
+                <option value="">Select City</option>
+                <option value="city1">City 1</option>
+                <option value="city2">City 2</option>
+            </select>
         </div>
-    </section>
+        <div class="form-group">
+            <label for="bookDate">Book Date</label>
+            <input type="date" id="bookDate">
+        </div>
+        <div class="form-group">
+            <label for="dropOffDate">Drop Off Date</label>
+            <input type="date" id="dropOffDate">
+        </div>
+        <div class="form-group">
+            <label for="time">Pick Up Time</label>
+            <input type="time" id="time">
+        </div>
+        <div class="form-group">
+            <label for="Time">Drop Off Time</label>
+            <input type="time" id="Time">
+        </div>
+        <button id="findBikeBtn" class="btn2" disabled>Find Bike</button>
+
+        <div id="bikeList" class="bike-list" style="display:none;">
+            <!-- Bike items will be injected here -->
+        </div>
+
+        <div id="cartSummary" class="cart-summary" style="display:none;">
+            <h3>Cart Summary</h3>
+            <div id="cartItems"></div>
+            <p>Total Amount: <span id="totalAmount">0</span> INR</p>
+            <p>Discount: <span id="discount">0</span>%</p>
+            <button id="proceedToCheckout" class="btn">Proceed to Checkout</button>
+        </div>
+
+        <div id="checkoutForm" class="checkout-form" style="display:none;">
+            <h3>Checkout</h3>
+            <form id="checkout">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod">
+                        <option value="cash">Cash</option>
+                        <option value="upi">UPI</option>
+                        <option value="debitCard">Debit Card</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Book Now</button>
+            </form>
+        </div>
+    </div>
+</section>
+  
 
     <!-- hero -->
     <section class="benefits">
@@ -379,7 +426,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+   
 
 
     <!-- script for navbar hamburger menu -->
@@ -400,6 +447,9 @@
             window.location.href = '/Review/review.html';
         });
     </script>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
